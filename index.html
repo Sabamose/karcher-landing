@@ -86,13 +86,14 @@
   <p>ესაუბრეთ ჩვენს AI ხმოვან ასისტენტს ქართულად — პროდუქტები, ფასები, სერვისი.</p>
   <div class="hint">დააჭირეთ <span>ღილაკს</span> ქვედა მარჯვენა კუთხეში →</div>
 
-<!-- Vapi Widget: standalone assistant "კერხერი" (voice mode) -->
+<!-- 1) Load the Vapi widget script -->
 <script
   src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js"
   defer
   async
 ></script>
 
+<!-- 2) Initialize the widget with your Assistant ID -->
 <script>
   window.addEventListener("load", () => {
     window.vapiSDK.run({
@@ -100,6 +101,8 @@
       assistant: "a4cac016-c4b7-4c6b-89b0-9ecf5fd5b194",
       config: {
         position: "bottom-right"
+        // Optional:
+        // theme: { primary: "#111827", secondary: "#ffffff" }
       }
     });
   });
